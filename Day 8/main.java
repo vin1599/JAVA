@@ -2,15 +2,15 @@ import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-		Engineer e[]=new Engineer[3];
+		Teacher t[]=new Teacher[3];
 		
 		for(int i=0;i<3;i++){
-		    e[i]=new Engineer();
-    		e[i].getDetails();
+		    t[i]=new Teacher();
+    		t[i].getDetails();
 		}
 		
 		for(int i=0;i<3;i++){
-		    e[i].putDetails();
+		    t[i].putDetails();
 		}
     		
 		Doctor d[]=new Doctor[3];
@@ -25,10 +25,10 @@ public class Main
 		}
 
         
-        Pilot p[]=new Pilot[3];
+        	Police p[]=new Police[3];
         
-        for(int i=0;i<3;i++){
-		    p[i]=new Pilot();
+        	for(int i=0;i<3;i++){
+		    p[i]=new Police();
     		p[i].getDetails();
 		}
 		
@@ -86,24 +86,24 @@ class Doctor extends Employee{
         System.out.println("Name: "+name+" Age: "+age+" Clinic : "+clinicName+" Specialities: "+Specialities);
     }
 }
-class Engineer extends Employee{
-    String companyName;
+class Teacher extends Employee{
+    String collegName;
     
     void getDetails(){
         
         super.getDetails();
         
         System.out.println("Enter company name:");
-        companyName=sc.nextLine();
+        collegeName=sc.nextLine();
     }
     void putDetails(){
         
         super.putDetails();
         
-        System.out.println(" Company Name: "+companyName);
+        System.out.println(" Company Name: "+collegeName);
     }
 }
-class Pilot extends Employee{
+class Police extends Employee{
     String trainingInst;
     
     void getDetails(){
